@@ -56,6 +56,7 @@ class ExchangeTest extends TestCase
         $this->assertSame('success', $lines[0]);
         $this->assertSame('PHPSESSID', $lines[1]);
         $this->assertSame($lines[2], $this->cookie);
+        $this->assertContains('format=flamixml', $lines);
     }
 
     public function test_checkauth_fails_on_a_wrong_password()

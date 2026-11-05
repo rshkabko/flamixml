@@ -66,7 +66,7 @@ Every response is plain text: the status on the first line, then the description
 
 | Request | Response |
 |---|---|
-| `type=catalog&mode=checkauth` + Basic auth | `success`, `PHPSESSID`, `<id>`, `sessid=<md5>`, `timestamp=<time>` |
+| `type=catalog&mode=checkauth` + Basic auth | `success`, `PHPSESSID`, `<id>`, `sessid=<md5>`, `timestamp=<time>`, `format=flamixml` |
 | any other mode | needs the cookie `PHPSESSID=<id>` from checkauth, else `failure`, `Empty PHPSESSID in Cookie!` or `Session did not pass checkauth!` |
 | `type=get_catalog&mode=query` | `progress` + description + XML per step, then `success` (see [export.md](export.md)) |
 | `type=catalog&mode=file&filename=offers.xml`, body = file | `success`, `File uploaded!`; a name other than `*.xml`/`*.zip` gets `failure`, `Only .xml and .zip files are accepted!` |

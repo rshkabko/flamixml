@@ -4,7 +4,7 @@ namespace Flamix\FlamixML\Operations;
 /** The checkauth handshake: issues the PHP session id and checks it on every later mode. */
 class CheckAuth
 {
-    /** Regenerates the session and prints success, PHPSESSID, the id, sessid and timestamp. */
+    /** Regenerates the session and prints success, PHPSESSID, the id, sessid, timestamp and format. */
     public static function printPhpSession()
     {
         $session_id = self::getSessionId(true);
@@ -16,6 +16,8 @@ class CheckAuth
             $session_id,
             'sessid=' . md5($session_id),
             'timestamp=' . time(),
+            // The app sends stock in FlamixML only to a site that says so; old plugins and 1C get CommerceML.
+            'format=flamixml',
         ]);
     }
 
