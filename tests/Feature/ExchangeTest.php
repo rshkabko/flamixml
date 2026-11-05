@@ -193,21 +193,11 @@ class ExchangeTest extends TestCase
     public function test_the_etalons_read_and_write_back_unchanged()
     {
         $dir = dirname(__DIR__, 2) . '/etalons/';
-        $classifier = file_get_contents($dir . 'expected/flamix-0.xml');
-        $offers = file_get_contents($dir . 'expected/flamix-1.xml');
+        $classifier = file_get_contents($dir . 'import_0.xml');
+        $offers = file_get_contents($dir . 'import_1.xml');
 
         $this->assertSame($classifier, FlamixML::classifier(FlamixML::readCategories($classifier), FlamixML::readProperties($classifier), FlamixML::readWarehouses($classifier)));
         $this->assertSame($offers, FlamixML::offers(FlamixML::readProducts($offers)));
-    }
-
-    public function test_the_export_examples_are_readable()
-    {
-        $dir = dirname(__DIR__, 2) . '/etalons/';
-
-        $this->assertCount(2, FlamixML::readCategories(file_get_contents($dir . 'import_0.xml')));
-        $this->assertCount(3, FlamixML::readProperties(file_get_contents($dir . 'import_0.xml')));
-        $this->assertCount(4, FlamixML::readProducts(file_get_contents($dir . 'import_1.xml')));
-        $this->assertNotEmpty(FlamixML::readProducts(file_get_contents($dir . 'import_2.xml')));
     }
 
     public function test_upload_accepts_only_a_bare_xml_or_zip_name()

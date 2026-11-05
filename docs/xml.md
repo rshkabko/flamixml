@@ -1,6 +1,6 @@
 # FlamixML XML and helpers
 
-`Flamix\FlamixML\OneC\FlamixML` writes and reads the XML; usable on its own, without the exchange. Export examples: `etalons/import_0.xml` (page 0: categories, warehouses, params), `etalons/import_1.xml` and `import_2.xml` (offers), `etalons/expected/` (the same catalog merged and repaged by the app).
+`Flamix\FlamixML\OneC\FlamixML` writes and reads the XML; usable on its own, without the exchange. Export examples: `etalons/import_0.xml` (page 0: categories, warehouses, params), `etalons/import_1.xml` (offers).
 
 ## Build
 
