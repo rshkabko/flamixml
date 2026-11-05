@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flamixml_commerce version="1.0">
+  <!-- Page 0: nested categories, a warehouse and params of every type -->
+  <categories>
+    <category external_id="example-flamixml-category-1">
+      <name>Example category</name>
+    </category>
+    <category external_id="example-flamixml-category-2" parent_external_id="example-flamixml-category-1">
+      <name>Example subcategory</name>
+    </category>
+  </categories>
+  <warehouses>
+    <warehouse external_id="example-flamixml-warehouse">
+      <name>Example warehouse</name>
+    </warehouse>
+  </warehouses>
+  <params>
+    <param external_id="example-flamixml-tags" multiple="true">
+      <name>Example tags</name>
+    </param>
+    <param external_id="example-flamixml-length" type="number">
+      <name>Example length</name>
+    </param>
+    <param external_id="example-flamixml-size" type="list">
+      <name>Example size</name>
+      <values>
+        <value external_id="example-flamixml-size-s">S</value>
+        <value external_id="example-flamixml-size-m">M</value>
+      </values>
+    </param>
+  </params>
+</flamixml_commerce>

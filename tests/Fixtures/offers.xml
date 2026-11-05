@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flamixml_commerce version="1.0">
+ <offers>
+  <offer external_id="product-1">
+   <stocks>
+    <stock external_id="main" value="7"/>
+   </stocks>
+  </offer>
+  <offer external_id="product-2">
+   <prices>
+    <price external_id="BASE" value="1002" currency="UAH"/>
+   </prices>
+   <stocks>
+    <stock external_id="main" value="3"/>
+    <stock external_id="reserve" value="4"/>
+   </stocks>
+  </offer>
+  <offer external_id="product-3">
+   <name>Product 3</name>
+   <sku>SKU-3</sku>
+   <prices>
+    <price external_id="BASE" value="30.5" currency="UAH"/>
+    <price external_id="SALE" value="25" currency="UAH"/>
+   </prices>
+  </offer>
+ </offers>
+</flamixml_commerce>

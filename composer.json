@@ -1,0 +1,25 @@
+{
+    "name": "flamix/flamixml",
+    "description": "Flamix package to use FlamixML",
+    "homepage": "https://flamix.solutions/bitrix24/integrations/site/products/",
+    "authors": [
+        {
+            "name": "Roman Shkabko",
+            "email": "r.shkabko@flamix.email",
+            "homepage": "http://flamix.software"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-simplexml": "*",
+        "ext-xmlwriter": "*",
+        "flamix/plugin-helpers": "dev-main"
+    },
+    "autoload":{
+        "psr-4":{
+            "Flamix\\FlamixML\\":"src"
+        }
+    }
+}
